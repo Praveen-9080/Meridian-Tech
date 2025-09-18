@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meridian Tech — CNC Cutting Tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <meta name="description" content="Meridian Tech — premium CNC cutting tools and tooling solutions." />
+  <style>
+    :root{
+      --accent:#0f766e;
+      --accent-2:#0ea5a4;
+      --bg:#071029;
+      --card:#0b1320;
+      --muted:#9aa8b3;
+      --glass: rgba(255,255,255,0.03);
+      font-family: 'Inter', system-ui;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#051428 0%, #071829 60%);color:#e6eef6;min-height:100vh;}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;box-shadow:0 8px 30px rgba(14,165,164,0.12)}
+    .logo span{font-size:20px}
+    .brand h1{margin:0;font-size:18px;letter-spacing:0.3px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a.cta{background:var(--accent);padding:10px 14px;border-radius:10px;color:white}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:26px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:34px;border-radius:14px;box-shadow:0 12px 40px rgba(2,6,23,0.6)}
+    .eyebrow{display:inline-block;padding:8px 12px;background:rgba(255,255,255,0.03);border-radius:999px;color:var(--accent-2);font-weight:700;font-size:13px}
+    h2{font-size:34px;margin:12px 0 8px}
+    p.lead{color:var(--muted);line-height:1.6}
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feat{background:var(--glass);padding:12px;border-radius:10px;min-width:120px;text-align:center}
+    .feat h4{margin:6px 0 0}
+
+    .card-side{background:linear-gradient(180deg,#071029 0%, #0b1726 100%);padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .specs{display:flex;flex-direction:column;gap:10px}
+    .spec{display:flex;align-items:center;gap:12px}
+    .spec i{font-size:18px;color:var(--accent-2);width:36px;text-align:center}
+
+    section{margin-top:34px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .product{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .product h3{margin:0 0 8px}
+    .product p{color:var(--muted);font-size:14px}
+
+    .brands-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:18px;margin-top:18px;align-items:center;}
+    .brand-logo{background:rgba(255,255,255,0.03);padding:16px;border-radius:12px;display:flex;align-items:center;justify-content:center;}
+    .brand-logo img{max-width:100%;max-height:60px;object-fit:contain;filter:brightness(0) invert(1);}
+
+    footer{margin-top:44px;padding:22px;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+    .contact-cards{display:flex;gap:12px}
+    .pill{display:inline-flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,0.02);color:var(--muted)}
+    .social a{margin-left:12px;color:var(--muted)}
+
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .grid-3{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      nav{margin-top:12px}
+    }
+
+    .btn{display:inline-block;padding:10px 14px;border-radius:9px;font-weight:700;text-decoration:none}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .map-wrap iframe{width:100%;height:260px;border:0;border-radius:10px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>M</span></div>
+        <div>
+          <h1>Meridian Tech</h1>
+          <p>Premium CNC cutting tools & tooling solutions</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#brands">Brands We Deal</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Get In Touch</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">Trusted Since 2025</span>
+        <h2>Precision CNC cutting tools — engineered for performance</h2>
+        <p class="lead">Meridian Tech delivers high-performance cutting tools, inserts, and customised tooling systems for metalworking industries. We focus on durability, repeatability and cost-efficiency so your machines run faster with fewer interruptions.</p>
+
+        <div class="features">
+          <div class="feat"><i class="fa-solid fa-gear"></i><h4>High Precision</h4></div>
+          <div class="feat"><i class="fa-solid fa-shield-halved"></i><h4>Durable</h4></div>
+          <div class="feat"><i class="fa-solid fa-truck-fast"></i><h4>Fast Delivery</h4></div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a class="btn btn-primary" href="#products">Explore Products</a>
+          <a class="btn btn-outline" href="mailto:salesmtech3@gmail.com">Email Sales</a>
+        </div>
+      </div>
+
+      <aside class="card-side">
+        <h3>Contact & Company</h3>
+        <div class="specs">
+          <div class="spec"><i class="fa-solid fa-user-tie"></i><div><strong>CEO</strong><div>S Anthoni Swamy</div></div></div>
+          <div class="spec"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><div><a href="mailto:salesmtech3@gmail.com">salesmtech3@gmail.com</a></div></div></div>
+          <div class="spec"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><div><a href="tel:+919488534186">+91 94885 34186</a>, <a href="tel:+919486081545">+91 94860 81545</a></div></div></div>
+          <div class="spec"><i class="fa-solid fa-location-dot"></i><div><strong>Location</strong><div><a href="https://www.google.com/maps?q=Meridian+Tech" target="_blank" rel="noopener">Open in Maps</a></div></div></div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;align-items:center">
+          <a class="pill" href="tel:+919488534186"><i class="fa-solid fa-phone"></i> Call Now</a>
+          <a class="pill" href="mailto:salesmtech3@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="hero-card">
+        <h3>About Meridian Tech</h3>
+        <p class="lead">Meridian Tech is led by CEO <strong>S Anthoni Swamy</strong> and specialises in advanced CNC cutting tools for milling, drilling, turning and finishing. Our mission is to provide industrial partners with tooling that minimises cycle time and maximises component quality. We combine modern coating technologies, precision geometry and rigorous quality control to deliver tools that stand up to heavy production demands.</p>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>Products</h2>
+      <p style="color:var(--muted)">High-quality tools for every stage of machining</p>
+      <div class="grid-3" style="margin-top:12px">
+        <article class="product"><h3>End Mills & Milling Cutters</h3><p>Carbide end mills with special geometries for roughing, finishing and slotting across a range of materials.</p></article>
+        <article class="product"><h3>Drills & Reamers</h3><p>High-performance drills and reamers designed for precision holes, long tool life and stable chip evacuation.</p></article>
+        <article class="product"><h3>Indexable Inserts & Toolholders</h3><p>Premium grade inserts and rigid toolholder systems for turning and milling operations.</p></article>
+        <article class="product"><h3>Cutting Inserts (Ceramic / CBN)</h3><p>Specialised inserts for hard turning and high-speed finishing — ceramic and CBN grades available.</p></article>
+        <article class="product"><h3>Custom Tooling Solutions</h3><p>Bespoke tooling design and small-batch manufacturing to meet unique production challenges.</p></article>
+        <article class="product"><h3>Tool Reconditioning & Technical Support</h3><p>Regrinding, recoating and technical consultation to extend tool life and optimise processes.</p></article>
+      </div>
+    </section>
+
+    <section id="brands">
+      <h2>Brands We Deal</h2>
+      <p style="color:var(--muted)">We proudly partner with global leaders in tooling and machining technology</p>
+      <div class="brands-grid">
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+1" alt="Brand 1"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+2" alt="Brand 2"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+3" alt="Brand 3"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+4" alt="Brand 4"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+5" alt="Brand 5"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+6" alt="Brand 6"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+1" alt="Brand 1"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+2" alt="Brand 2"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+3" alt="Brand 3"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+4" alt="Brand 4"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+5" alt="Brand 5"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+6" alt="Brand 6"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+1" alt="Brand 1"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+2" alt="Brand 2"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+3" alt="Brand 3"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+4" alt="Brand 4"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+5" alt="Brand 5"></div>
+        <div class="brand-logo"><img src="https://dummyimage.com/200x80/0ea5a4/ffffff&text=Brand+6" alt="Brand 6"></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px">
+        <div class="hero-card">
+          <h3>Get in touch</h3>
+          <p class="lead">Reach out for quotations, technical enquiries or custom tooling projects. Provide brief details and we will respond promptly.</p>
+          <form action="mailto:salesmtech3@gmail.com" method="post" enctype="text/plain" style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+            <input name="name" placeholder="Your name" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <input name="email" placeholder="Email" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <textarea name="message" rows="5" placeholder="Tell us about your project" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:10px">
+              <button type="submit" class="btn btn-primary">Send</button>
+              <a class="btn btn-outline" href="tel:+919488534186">Call +91 94885 34186</a>
+            </div>
+          </form>
+          <p style="color:var(--muted);margin-top:12px;font-size:13px">CEO: <strong>S Anthoni Swamy</strong></p>
+        </div>
+        <aside>
+          <div class="card-side map-wrap">
+            <h4 style="margin-top:0">Location</h4>
+            <iframe src="https://www.google.com/maps?q=Meridian+Tech&output=embed" loading="lazy"></iframe>
+            <p style="color:var(--muted);font-size:13px;margin-top:10px">Open in Google Maps: <a href="https://www.google.com/maps?q=Meridian+Tech" target="_blank" rel="noopener">Meridian Tech</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Meridian Tech</strong>
+        <div style="color:var(--muted);font-size:13px">CEO: S Anthoni Swamy • Email: <a href="mailto:salesmtech3@gmail.com">salesmtech3@gmail.com</a></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="contact-cards">
+          <div class="pill"><i class="fa-solid fa-phone"></i> <a href="tel:+919488534186">+91 94885 34186</a></div>
+          <div class="pill"><i class="fa-solid fa-phone"></i> <a href="tel:+919486081545">+91 94860 81545</a></div>
+        </div>
+        <div class="social">
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t
